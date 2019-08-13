@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Lineup Card Generator</title>
+</head>
+<body>
+    <h1>Lineup Card Generator</h1>
+    <nav th:replace="fragments::navigation"></nav>
+    <h2>Current Lineup:</h2>
+    <table >
+        <tr th:each="position: ${positions}">
+            <td th:text="${position}"></td>
+            <td th:text="${currentLineup.get(position)}"></td>
+        </tr>
+    </table>
+
+</body>
+</html>
