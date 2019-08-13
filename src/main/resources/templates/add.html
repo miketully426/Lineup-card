@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add a player</title>
+</head>
+<body>
+    <form method="post">
+        <label>Position:</label>
+        <select name="position">
+           <option th:each="position: ${positions}" th:text="${position}" th:value="${position}"/>
+        </select>
+        <label>Player:</label>
+        <input type="text" name="player" />
+        <input type="submit" />
+    </form>
+</body>
+</html>
