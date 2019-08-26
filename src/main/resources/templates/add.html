@@ -11,7 +11,9 @@
            <option th:each="position: ${positions}" th:text="${position}" th:value="${position}"/>
         </select>
         <label>Player:</label>
-        <input type="text" name="player" />
+        <select name="playerId">
+            <option th:each="player: ${players}" th:text="${player.name}" th:value="${player.playerId}" />
+        </select>
         <input type="submit" />
     </form>
 </body>

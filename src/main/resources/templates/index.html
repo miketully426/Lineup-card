@@ -11,7 +11,7 @@
     <table >
         <tr th:each="position: ${positions}">
             <td th:text="${position}"></td>
-            <td th:text="${currentLineup.get(position)}"></td>
+            <td th:text="${currentLineup.get(position)?.name}">Empty</td>
         </tr>
     </table>
 
