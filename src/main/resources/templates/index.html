@@ -10,7 +10,7 @@
     <h2>Current Lineup:</h2>
     <table >
         <tr th:each="position: ${positions}">
-            <td th:text="${position}"></td>
+            <td th:text="${position.display}"></td>
             <td th:text="${currentLineup.get(position)?.name}">Empty</td>
         </tr>
     </table>

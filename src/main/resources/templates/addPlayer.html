@@ -5,13 +5,22 @@
     <title>Add a player</title>
 </head>
 <body>
-<form method="post">
-    <label>Name:</label>
-    <input type="text" name="name"/>
-    <label>Number:</label>
-    <input type="text" name="number" />
-    <label>Age:</label>
-    <input type="text" name="age" />
+<form method="post" th:object="${player}">
+   <div>
+    <label th:for="name">Name:</label>
+    <input type="text" th:field="*{name}"/>
+    <span th:errors="*{name}"></span>
+   </div>
+    <div>
+    <label th:for="number">Number:</label>
+    <input type="text" th:field="*{number}" />
+    <span th:errors="*{number}"></span>
+    </div>
+    <div>
+    <label th:for="age">Age:</label>
+    <input type="text" th:field="*{age}" />
+    <span th:errors="*{age}"></span>
+    </div>
     <input type="submit" />
 </form>
 </body>
